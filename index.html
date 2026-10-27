@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple study planner to help students choose a focus and track their study sessions.">
+  <title>Small Steps | Study Planner</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Created with ChatGPT assistance; see README.md for acknowledgement. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#">Small Steps<span>STUDENT STUDY CLUB</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#planner">My planner</a>
+      <a href="#habits">Study habits</a>
+      <button id="theme-toggle" type="button" aria-pressed="false">Dark theme</button>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div>
+        <p class="eyebrow">A LITTLE PROGRESS, EVERY DAY</p>
+        <h1 id="hero-heading">Big goals.<br>Small steps.</h1>
+        <p class="intro">Make room for focused learning. Pick one task, give it your attention, and celebrate getting it done.</p>
+        <a class="button" href="#planner">Plan my next session <span aria-hidden="true">↗</span></a>
+        <p class="small">No account. No distractions. Just your next step.</p>
+      </div>
+      <figure class="hero-art">
+        <img src="assets/study-desk.svg" alt="Illustration of a notebook, a pencil and a cup on a study desk" width="560" height="420">
+        <figcaption>Clear your desk. Give your ideas some space.</figcaption>
+      </figure>
+    </section>
+    <section id="planner" class="planner" aria-labelledby="planner-heading">
+      <div class="section-heading"><p class="eyebrow">01 / MAKE A PLAN</p><h2 id="planner-heading">What will you work on?</h2><p>Keep it specific. One manageable task is a great start.</p></div>
+      <div class="planner-grid">
+        <form id="session-form">
+          <label for="task">Your study task</label>
+          <input id="task" name="task" type="text" maxlength="80" placeholder="e.g. Practise CSS Grid" required>
+          <label for="duration">Session length</label>
+          <select id="duration" name="duration"><option value="15">15 minutes — a quick start</option><option value="25" selected>25 minutes — focused practice</option><option value="45">45 minutes — deeper learning</option></select>
+          <button class="button" type="submit">Set my focus</button>
+        </form>
+        <div class="focus-card">
+          <p class="eyebrow">YOUR NEXT SMALL STEP</p>
+          <h3 id="focus-task">Choose a task to get started</h3>
+          <p id="focus-duration">Your session plan will appear here.</p>
+          <button id="complete-session" type="button" disabled>Mark session complete</button>
+          <p id="session-feedback" role="status" aria-live="polite"></p>
+          <div class="progress-row"><p><strong id="session-count">0</strong> sessions completed on this visit</p><button id="reset-progress" type="button" disabled>Reset count</button></div>
+        </div>
+      </div>
+      <noscript><p>Enable JavaScript to set a study focus and track completed sessions.</p></noscript>
+    </section>
+    <section id="habits" class="habits" aria-labelledby="habits-heading">
+      <p class="eyebrow">02 / BUILD THE HABIT</p><h2 id="habits-heading">A better session starts here.</h2>
+      <div class="habit-grid">
+        <article><span class="number" aria-hidden="true">01</span><h3>Make it manageable</h3><p>Split a big assignment into a task you can finish in a single session.</p></article>
+        <article><span class="number" aria-hidden="true">02</span><h3>Protect your attention</h3><p>Put notifications aside and keep only the resources you need in front of you.</p></article>
+        <article><span class="number" aria-hidden="true">03</span><h3>Pause and reflect</h3><p>After each session, note one thing you learned and decide what comes next.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><p class="brand">Small Steps</p><p>A Web Development II refresher project · HTML / CSS / JavaScript</p><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
